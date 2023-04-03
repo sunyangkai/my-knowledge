@@ -1,3 +1,4 @@
+"use strict";
 (self["webpackChunkmain_app"] = self["webpackChunkmain_app"] || []).push([["bootstrap_js"],{
 
 /***/ "./App.jsx":
@@ -6,7 +7,6 @@
   \*****************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ App)
@@ -32,20 +32,17 @@ class App extends (lib_app_react__WEBPACK_IMPORTED_MODULE_0___default().Componen
     this.handleClick = this.handleClick.bind(this);
     this.HanldeSwitchVisible = this.HanldeSwitchVisible.bind(this);
   }
-
   handleClick(ev) {
     console.log(ev);
     this.setState({
       dialogVisible: true
     });
   }
-
   HanldeSwitchVisible(visible) {
     this.setState({
       dialogVisible: visible
     });
   }
-
   render() {
     return /*#__PURE__*/lib_app_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/lib_app_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Open Dev Tool And Focus On Network,checkout resources details"), /*#__PURE__*/lib_app_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "react\u3001react-dom js files hosted on ", /*#__PURE__*/lib_app_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "lib-app")), /*#__PURE__*/lib_app_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "components hosted on ", /*#__PURE__*/lib_app_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "component-app")), /*#__PURE__*/lib_app_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Buttons:"), /*#__PURE__*/lib_app_react__WEBPACK_IMPORTED_MODULE_0___default().createElement((component_app_Button__WEBPACK_IMPORTED_MODULE_1___default()), {
       type: "primary"
@@ -61,7 +58,6 @@ class App extends (lib_app_react__WEBPACK_IMPORTED_MODULE_0___default().Componen
       message: "Hello,world!"
     }));
   }
-
 }
 
 /***/ }),
@@ -72,7 +68,6 @@ class App extends (lib_app_react__WEBPACK_IMPORTED_MODULE_0___default().Componen
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _App_jsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.jsx */ "./App.jsx");
 /* harmony import */ var lib_app_react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lib-app/react-dom */ "webpack/container/remote/lib-app/react-dom");
@@ -82,7 +77,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-lib_app_react_dom__WEBPACK_IMPORTED_MODULE_1___default().render( /*#__PURE__*/lib_app_react__WEBPACK_IMPORTED_MODULE_2___default().createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_0__.default, null), document.getElementById("app"));
+lib_app_react_dom__WEBPACK_IMPORTED_MODULE_1___default().render( /*#__PURE__*/lib_app_react__WEBPACK_IMPORTED_MODULE_2___default().createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_0__["default"], null), document.getElementById("app"));
 
 /***/ })
 

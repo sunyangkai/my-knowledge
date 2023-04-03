@@ -1,3 +1,4 @@
+"use strict";
 (self["webpackChunkcomponent_app"] = self["webpackChunkcomponent_app"] || []).push([["src_Logo_jsx"],{
 
 /***/ "./src/Logo.jsx":
@@ -6,7 +7,6 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
@@ -18,7 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
   return /*#__PURE__*/lib_app_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: _MF_jpeg__WEBPACK_IMPORTED_MODULE_1__.default,
+    src: _MF_jpeg__WEBPACK_IMPORTED_MODULE_1__["default"],
     style: {
       width: "500px",
       borderRadius: "10px"
@@ -34,7 +34,6 @@ __webpack_require__.r(__webpack_exports__);
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
