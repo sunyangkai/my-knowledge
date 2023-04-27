@@ -1,6 +1,64 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "webpack/container/reference/react-dom/client":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** external "new Promise(resolve => {\n         const proxy = {\n           get: () =>  {\n             const m = window[\"base-lib-bundle\"];\n             return Promise.resolve(() => m.default[\"react-dom/client\"])\n           },\n           init: (arg) => {\n           }\n         }\n         if (window[\"base-lib-bundle\"] !== undefined) {\n           return resolve(proxy);\n         }\n         const script = document.createElement('script')\n         script.src = \"http://localhost:3004/index.js\";\n         script.onload = () => {\n           resolve(proxy)\n         }\n         document.head.appendChild(script);\n       })" ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = new Promise(resolve => {
+         const proxy = {
+           get: () =>  {
+             const m = window["base-lib-bundle"];
+             return Promise.resolve(() => m.default["react-dom/client"])
+           },
+           init: (arg) => {
+           }
+         }
+         if (window["base-lib-bundle"] !== undefined) {
+           return resolve(proxy);
+         }
+         const script = document.createElement('script')
+         script.src = "http://localhost:3004/index.js";
+         script.onload = () => {
+           resolve(proxy)
+         }
+         document.head.appendChild(script);
+       });
+
+/***/ }),
+
+/***/ "webpack/container/reference/react":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** external "new Promise(resolve => {\n         const proxy = {\n           get: () =>  {\n             const m = window[\"base-lib-bundle\"];\n             return Promise.resolve(() => m.default[\"react\"])\n           },\n           init: (arg) => {\n           }\n         }\n         if (window[\"base-lib-bundle\"] !== undefined) {\n           return resolve(proxy);\n         }\n         const script = document.createElement('script')\n         script.src = \"http://localhost:3004/index.js\";\n         script.onload = () => {\n           resolve(proxy)\n         }\n         document.head.appendChild(script);\n       })" ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = new Promise(resolve => {
+         const proxy = {
+           get: () =>  {
+             const m = window["base-lib-bundle"];
+             return Promise.resolve(() => m.default["react"])
+           },
+           init: (arg) => {
+           }
+         }
+         if (window["base-lib-bundle"] !== undefined) {
+           return resolve(proxy);
+         }
+         const script = document.createElement('script')
+         script.src = "http://localhost:3004/index.js";
+         script.onload = () => {
+           resolve(proxy)
+         }
+         document.head.appendChild(script);
+       });
+
+/***/ }),
+
 /***/ "webpack/container/reference/component-app":
 /*!*********************************************************************!*\
   !*** external "component_app@http://localhost:3001/remoteEntry.js" ***!
@@ -23,30 +81,6 @@ module.exports = new Promise((resolve, reject) => {
 	}, "component_app");
 }).then(() => (component_app));
 
-/***/ }),
-
-/***/ "webpack/container/reference/lib-app":
-/*!***************************************************************!*\
-  !*** external "lib_app@http://localhost:3000/remoteEntry.js" ***!
-  \***************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-var __webpack_error__ = new Error();
-module.exports = new Promise((resolve, reject) => {
-	if(typeof lib_app !== "undefined") return resolve();
-	__webpack_require__.l("http://localhost:3000/remoteEntry.js", (event) => {
-		if(typeof lib_app !== "undefined") return resolve();
-		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
-		var realSrc = event && event.target && event.target.src;
-		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
-		__webpack_error__.name = 'ScriptExternalLoadError';
-		__webpack_error__.type = errorType;
-		__webpack_error__.request = realSrc;
-		reject(__webpack_error__);
-	}, "lib_app");
-}).then(() => (lib_app));
-
 /***/ })
 
 /******/ 	});
@@ -63,7 +97,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
+/******/ 			id: moduleId,
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
@@ -190,38 +224,26 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	(() => {
 /******/ 		var chunkMapping = {
 /******/ 			"bootstrap_js": [
-/******/ 				"webpack/container/remote/lib-app/react",
-/******/ 				"webpack/container/remote/component-app/Button",
-/******/ 				"webpack/container/remote/component-app/Dialog",
-/******/ 				"webpack/container/remote/component-app/ToolTip",
-/******/ 				"webpack/container/remote/lib-app/react-dom"
+/******/ 				"webpack/container/remote/react",
+/******/ 				"webpack/container/remote/component-app/ecnomic",
+/******/ 				"webpack/container/remote/react-dom/client"
 /******/ 			]
 /******/ 		};
 /******/ 		var idToExternalAndNameMapping = {
-/******/ 			"webpack/container/remote/lib-app/react": [
+/******/ 			"webpack/container/remote/react": [
 /******/ 				"default",
-/******/ 				"./react",
-/******/ 				"webpack/container/reference/lib-app"
+/******/ 				".",
+/******/ 				"webpack/container/reference/react"
 /******/ 			],
-/******/ 			"webpack/container/remote/component-app/Button": [
+/******/ 			"webpack/container/remote/component-app/ecnomic": [
 /******/ 				"default",
-/******/ 				"./Button",
+/******/ 				"./ecnomic",
 /******/ 				"webpack/container/reference/component-app"
 /******/ 			],
-/******/ 			"webpack/container/remote/component-app/Dialog": [
+/******/ 			"webpack/container/remote/react-dom/client": [
 /******/ 				"default",
-/******/ 				"./Dialog",
-/******/ 				"webpack/container/reference/component-app"
-/******/ 			],
-/******/ 			"webpack/container/remote/component-app/ToolTip": [
-/******/ 				"default",
-/******/ 				"./ToolTip",
-/******/ 				"webpack/container/reference/component-app"
-/******/ 			],
-/******/ 			"webpack/container/remote/lib-app/react-dom": [
-/******/ 				"default",
-/******/ 				"./react-dom",
-/******/ 				"webpack/container/reference/lib-app"
+/******/ 				".",
+/******/ 				"webpack/container/reference/react-dom/client"
 /******/ 			]
 /******/ 		};
 /******/ 		__webpack_require__.f.remotes = (chunkId, promises) => {
@@ -309,7 +331,8 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			switch(name) {
 /******/ 				case "default": {
 /******/ 					initExternal("webpack/container/reference/component-app");
-/******/ 					initExternal("webpack/container/reference/lib-app");
+/******/ 					initExternal("webpack/container/reference/react");
+/******/ 					initExternal("webpack/container/reference/react-dom/client");
 /******/ 				}
 /******/ 				break;
 /******/ 			}
@@ -411,6 +434,11 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 		var chunkLoadingGlobal = self["webpackChunkmain_app"] = self["webpackChunkmain_app"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
 /******/ 	})();
 /******/ 	
 /************************************************************************/

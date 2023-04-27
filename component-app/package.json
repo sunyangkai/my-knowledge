@@ -4,27 +4,40 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack --watch",
-    "serve": "serve dist -p 3001",
-    "start": "concurrently \"npm run webpack\" \"npm run serve\""
+    "start": "concurrently \"pnpm webpack --watch\" \"pnpm serve dist -p 3001\"",
+    "dev": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.21.4",
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
+    "cache-loader": "^4.1.0",
     "concurrently": "^6.1.0",
-    "css-loader": "^5.2.4",
+    "css-loader": "^5.2.7",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
+    "less-loader": "^11.1.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "postcss": "^8.4.23",
+    "postcss-loader": "^7.1.0",
+    "postcss-preset-env": "^8.3.2",
     "serve": "^11.3.2",
     "style-loader": "^2.0.0",
+    "thread-loader": "^3.0.4",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.3",
     "url-loader": "^4.1.1",
     "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0"
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
+    "@types/node": "^18.16.1",
+    "less": "^4.1.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

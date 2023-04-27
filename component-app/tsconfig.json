@@ -1,0 +1,45 @@
+{
+    "compilerOptions": {
+        "downlevelIteration": true,
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true,
+        "module": "esNext",
+        "jsx": "react",
+        "target": "ES5",
+        "allowJs": true,
+        "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "watch": true,
+        "noEmitOnError": true,
+        "noEmit": false,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "lib": [
+            "dom",
+            "es2015",
+            "ES2016",
+            "ES2019",
+        ],
+        "moduleResolution": "node",
+        "typeRoots": [
+            "node_modules/@types",
+            "@types"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "component-app": [
+                "../component-app/dist/types"
+            ],
+            "myRouter": [
+                "./src/lib/router"
+            ],
+            "static_page": [
+                "./img"
+            ],
+            "@components": [
+                "./public/components"
+            ],
+
+        }
+    },
+}

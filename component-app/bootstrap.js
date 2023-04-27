@@ -1,4 +1,4 @@
 import App from "./App";
-import ReactDOM from 'lib-app/react-dom';
-import React from 'lib-app/react'
+import React from 'react';
+import ReactDOM from 'react-dom';
 ReactDOM.render(<App />, document.getElementById("app"));

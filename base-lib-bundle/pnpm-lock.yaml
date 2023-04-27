@@ -14,8 +14,8 @@ specifiers:
   jquery: ^3.6.3
   less: ^4.1.2
   postcss: ^8.4.20
-  react: ^17.0.2
-  react-dom: ^17.0.2
+  react: ^18.0.2
+  react-dom: ^18.0.2
   react-redux: ^7.2.6
   redux: ^4.2.1
   rollup: ^3.18.0
@@ -34,9 +34,9 @@ specifiers:
 dependencies:
   '@types/history': registry.npmmirror.com/@types/history/5.0.0
   jquery: registry.npmmirror.com/jquery/3.6.4
-  react: registry.npmmirror.com/react/17.0.2
-  react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
-  react-redux: registry.npmmirror.com/react-redux/7.2.9_sfoxds7t5ydpegc3knd667wn6m
+  react: registry.npmmirror.com/react/18.2.0
+  react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
+  react-redux: registry.npmmirror.com/react-redux/7.2.9_biqbaboplfbrettd7655fr4n2y
   redux: registry.npmmirror.com/redux/4.2.1
   serve: registry.npmmirror.com/serve/11.3.2
   suny-form: registry.npmmirror.com/suny-form/1.0.3
@@ -4068,18 +4068,17 @@ packages:
       strip-json-comments: registry.npmmirror.com/strip-json-comments/2.0.1
     dev: false
 
-  registry.npmmirror.com/react-dom/17.0.2_react@17.0.2:
-    resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-dom/-/react-dom-17.0.2.tgz}
-    id: registry.npmmirror.com/react-dom/17.0.2
+  registry.npmmirror.com/react-dom/18.2.0_react@18.2.0:
+    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-dom/-/react-dom-18.2.0.tgz}
+    id: registry.npmmirror.com/react-dom/18.2.0
     name: react-dom
-    version: 17.0.2
+    version: 18.2.0
     peerDependencies:
-      react: 17.0.2
+      react: ^18.2.0
     dependencies:
       loose-envify: registry.npmmirror.com/loose-envify/1.4.0
-      object-assign: registry.npmmirror.com/object-assign/4.1.1
-      react: registry.npmmirror.com/react/17.0.2
-      scheduler: registry.npmmirror.com/scheduler/0.20.2
+      react: registry.npmmirror.com/react/18.2.0
+      scheduler: registry.npmmirror.com/scheduler/0.23.0
     dev: false
 
   registry.npmmirror.com/react-is/16.13.1:
@@ -4094,7 +4093,7 @@ packages:
     version: 17.0.2
     dev: false
 
-  registry.npmmirror.com/react-redux/7.2.9_sfoxds7t5ydpegc3knd667wn6m:
+  registry.npmmirror.com/react-redux/7.2.9_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-Gx4L3uM182jEEayZfRbI/G11ZpYdNAnBs70lFVMNdHJI76XYtR+7m0MN+eAs7UHBPhWXcnFPaS+9owSCJQHNpQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-redux/-/react-redux-7.2.9.tgz}
     id: registry.npmmirror.com/react-redux/7.2.9
     name: react-redux
@@ -4114,19 +4113,18 @@ packages:
       hoist-non-react-statics: registry.npmmirror.com/hoist-non-react-statics/3.3.2
       loose-envify: registry.npmmirror.com/loose-envify/1.4.0
       prop-types: registry.npmmirror.com/prop-types/15.8.1
-      react: registry.npmmirror.com/react/17.0.2
-      react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
+      react: registry.npmmirror.com/react/18.2.0
+      react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
       react-is: registry.npmmirror.com/react-is/17.0.2
     dev: false
 
-  registry.npmmirror.com/react/17.0.2:
-    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react/-/react-17.0.2.tgz}
+  registry.npmmirror.com/react/18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react/-/react-18.2.0.tgz}
     name: react
-    version: 17.0.2
+    version: 18.2.0
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: registry.npmmirror.com/loose-envify/1.4.0
-      object-assign: registry.npmmirror.com/object-assign/4.1.1
     dev: false
 
   registry.npmmirror.com/redux/4.2.1:
@@ -4418,13 +4416,12 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/scheduler/0.20.2:
-    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/scheduler/-/scheduler-0.20.2.tgz}
+  registry.npmmirror.com/scheduler/0.23.0:
+    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/scheduler/-/scheduler-0.23.0.tgz}
     name: scheduler
-    version: 0.20.2
+    version: 0.23.0
     dependencies:
       loose-envify: registry.npmmirror.com/loose-envify/1.4.0
-      object-assign: registry.npmmirror.com/object-assign/4.1.1
     dev: false
 
   registry.npmmirror.com/semver/5.7.1:

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script>
+        //    function a() {
+        //       (function b() {
+        //         b = 3;
+        //         console.log(b)
+        //       })()
+        //    }
+        //    a();
+         
+
+        // 假设你有这样一个URL：
+        const urlString = "https%3A%2F%2Ftest-ydxs.myscrm.cn%2Fmain%2Fv2%2Fmanager%2Foverview%3Ftc_id%3D1643868359923798016%26from%3Dh5%26orgcode%3Dgzminjieadmin_test%26proj_id%3D39f9e890-5aab-a7aa-6915-6648cb197e74%26qw_app_id%3D3a07bfb1-6d5a-22e2-072c-1e6a40e3f3fc%26role_mode%3Dmanager%26third%3Dqwykd%26ticket%3DA9DC3CBD7F70CD6DE79ECFFC764E9D13%26token%3Dphbvik1545297516%26user_id%3D3a00ab9f-3808-c2c3-7632-16fa8dc281ed%26user_type%3D2 HTTP/1.1";
+
+        // 创建一个URL对象
+        const url = new URL(decodeURIComponent(urlString));
+
+        // 获取URLSearchParams对象
+        const searchParams = url.searchParams;
+
+        // 创建一个空对象来存储参数
+        const paramsObj = {};
+
+        // 遍历URLSearchParams对象并将参数添加到paramsObj中
+        for (let [key, value] of searchParams.entries()) {
+        paramsObj[key] = value;
+        }
+
+        console.log(paramsObj); // {q: "javascript", sort: "desc", page: "1"}
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
