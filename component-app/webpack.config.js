@@ -19,6 +19,7 @@ const isRemote = process.env.npm_lifecycle_event === 'start';
 
 const plugins = [
   new HtmlWebpackPlugin({
+    title: '知识库',
     template: "./public/index.html",
   })
 ];
