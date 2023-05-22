@@ -43,30 +43,19 @@ function throttle(fn, timespace) {
 // const newFunc = throttle(func, 100); 
 
 
-
-
-
-const debounce2 = (fn, timespace) => {
+const d = function (fn, space) {
     let timeid = null;
     return function (...args) {
-        if (!timeid) {
-            timeid = setTimeout(() => {
-                fn.apply(this, args);
-            }, timespace)
+        if (timeid) {
+            clearTimeout(timeid);
+            timeid = null;
         } else {
-            clearTimeout(timeid)
+            timeid = setTimeout(() => {
+                fn.apply(this, args);
+            }, space)
         }
     }
 }
 
-const throttle2 = (fn, timespace) => {
-    let timeid = null;
-    return function (...args) {
-        if (!timeid) {
-            timeid = setTimeout(() => {
-                fn.apply(this, args);
-                timeid = null;
-            }, timespace)
-        }
-    }
-}
+
+

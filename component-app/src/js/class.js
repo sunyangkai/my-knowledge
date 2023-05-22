@@ -177,9 +177,6 @@ const class_test = () => {
         // }
 
         
-        
-
-
    
     /*
             
@@ -196,37 +193,43 @@ const class_test = () => {
             const p1 = Person('Alice'); // undefined
     */
          
+        // class 的 constructor里设置的属性在实例上，class属性在原型上
     
-    /*
-            类是一种特殊的函数
-            class Person {
-                constructor(name) {
-                    this.name = name;
-                }
-                
-                sayHello() {
-                    console.log('Hello, my name is ' + this.name);
-                }
-            }
-            console.log(typeof Person); // 输出 "function"
+        // class Parent {
+        //     constructor(name, age) {
+        //         this.name = name;
+        //         this.age = age;
+        //         this.hello = function() {
+        //             console.log(this.age)
+        //         }
+        //     }
+        //     say() {
+        //         console.log(this.name)
+        //     }
+        // }
 
-            js底层会转化为:
-
-            function Person(name) {
-                this.name = name;
-            }
-            
-            Person.prototype.sayHello = function() {
-                console.log('Hello, my name is ' + this.name);
-            };
-
-            // 声明构造函数的时候会自动创建prototype对象，prototype对象上包含constructor函数，指向了构造函数本身
-           // console.log(Person === Person.prototype.constructor) // true
-
-     */
-
-
+        // const p1 = new Parent('Alice', 17);
+        // const p2 = new Parent('Allen', 18);
     
+        // const p1Prototype = Object.getPrototypeOf(p1);
+
+        // 检查 say 方法是否直接定义在对象上（而不是沿着原型链的某个地方）。
+        // 如果 say 方法是 p1Prototype 的自有属性（即直接定义在该对象上），则返回 true，否则返回 false。
+        // console.log(p1Prototype.hasOwnProperty('say')) // true
+        // console.log(p1Prototype.hasOwnProperty('name')) // false
+        // console.log(p1.hasOwnProperty('name')) // true
+
+        // console.log(p1Prototype)  // {}
+        // 浏览器控制台通常会显示 {}，因为它只显示原型对象上的可枚举属性。而 say 方法是一个不可枚举属性，因此它不会在控制台输出中显示
+        // ES6 标准中的规定，即类定义中的方法都是不可枚举的。这有助于提高代码的可读性，因为你通常不希望在遍历对象的属性时包含方法。
+
+        // p1.say = null; // 直接修改不会修改原型对象，这里实际上是给实例上添加了say方法
+        // p1Prototype.say = null; // 先获取原型对象，再修改
+
+
+        // for (let prop in p1) {
+        //     properties.push(prop); // for xx in xx 只会遍历可枚举属性
+        // }
     
     }
     class_test();

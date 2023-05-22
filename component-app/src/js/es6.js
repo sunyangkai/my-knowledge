@@ -21,7 +21,33 @@ const javacript_es6 = () => {
     // import myModule from './myModule';
 
     // 7. 箭头函数
+    // 为解决 函数作用域this 绑定而生。this 的值取决于函数被调用时的方式和上下文环境。这使得在函数内部访问外部的 this 值变得困难，也导致了 this 绑定错误的出现。
+    // 但没有arguments对象，因为它没有自己的函数作用域，可使用剩余参数访问函数args
+    // 不能 new 操作，因为它没有自己的this
+    const person = {
+        name: 'Alice',
+        age: 30,
+      
+        // 定义一个普通函数，用来访问外部的 this 值和变量
+        greet: function() {
+          const self = this;
+      
+          setTimeout(function() {
+            // console.log(this)
+            console.log(`Hello, my name is ${self.name}, and I'm ${self.age} years old.`);
+          }, 1000);
+        },
+      
+        // 定义一个箭头函数，用来访问外部的 this 值和变量
+        sayHello: function() {
+          setTimeout(() => {
+            console.log(this)
+            console.log(`Hello, my name is ${this.name}, and I'm ${this.age} years old.`);
+          }, 2000);
+        }
+      };
 
+      person.sayHello()
 
     // 8.Symbol
     /*
@@ -44,8 +70,70 @@ const javacript_es6 = () => {
     // 展开语法 const copyOfTodd = { ...person };  剩余语法  const [a, b, ...rest] = arr;
     // 轻松地创建数组或对象的副本
 
-    //
-    
+    // 9.object.freeze() 冻结对象，不能修改对象属性。但是引用属性还能修改
+    // 深度冻结对象需要递归掉哟改object.freeze() 
+    // function deepFreeze(object) {
+    //     let propNames = Object.getOwnPropertyNames(object);
+    //     for (let name of propNames) {
+    //         let value = object[name];
+    //         object[name] = value && typeof value === "object" ?
+    //             deepFreeze(value) : value;
+    //     }
+    //     return Object.freeze(object);
+    // }
+        
+     /*
+        class Person {
+            constructor(name, age) {
+            this.name = name;
+            this.age = age;
+            }
+        
+            getDetails() {
+            return `${this.name} is ${this.age} years old.`;
+            }
+        }
+        class Student extends Person {
+            constructor(name, age, grade) {
+            super(name, age);
+            this.grade = grade;
+            }
+        }
+        const student = new Student('John', 18, 'A');
+        Student.prototype.isStudying = true;
+        
+        const keyArr = [];
+        for (let key in student) { // 遍历对象可枚举的属性，包括原型上的
+            keyArr.push(key) // 输出 name, age, grade, isStudying
+        }
+        console.log(keyArr); // [ 'name', 'age', 'grade', 'isStudying' ]
+        console.log(Object.getOwnPropertyNames(student)) // 获取包括不可枚举的属性，只获取自身的属性，不包含原型上的 [ 'name', 'age', 'grade' ]
+        console.log(Object.getPrototypeOf(student)); // Person { isStudying: true }
+
+        // 如果要获取不可枚举的，还要所有原型链上的属性
+        const getAllPropertyNames = obj => {
+            let props = [];
+            do { // 循环是在执行循环之前先执行一次循环体，然后再判断循环条件是否成立，
+              props = props.concat(Object.getOwnPropertyNames(obj));
+            } while (obj = Object.getPrototypeOf(obj));
+          
+            return props;
+        };
+        
+        console.log(getAllPropertyNames(student))
+
+        // Object.entries
+        const person = {
+            name: 'Alice',
+            age: 30,
+            gender: 'female'
+          };
+          
+          for (let [key, value] of Object.entries(person)) {
+            console.log(`${key}: ${value}`);
+          }
+
+     */
 }
 
 javacript_es6()
