@@ -1,6 +1,6 @@
 import * as rollup from 'rollup';
 import json from '@rollup/plugin-json';
-import {terser} from 'rollup-plugin-terser'; // 生产环境代码压缩
+import terser from '@rollup/plugin-terser'; // 生产环境代码压缩
 import bundleReplace from '../plugins/replace.js';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url'
