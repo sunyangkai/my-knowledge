@@ -225,7 +225,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 		var chunkMapping = {
 /******/ 			"bootstrap_js": [
 /******/ 				"webpack/container/remote/react",
-/******/ 				"webpack/container/remote/component-app/react",
+/******/ 				"webpack/container/remote/component-app/reserch",
 /******/ 				"webpack/container/remote/react-dom/client"
 /******/ 			]
 /******/ 		};
@@ -235,9 +235,9 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 				".",
 /******/ 				"webpack/container/reference/react"
 /******/ 			],
-/******/ 			"webpack/container/remote/component-app/react": [
+/******/ 			"webpack/container/remote/component-app/reserch": [
 /******/ 				"default",
-/******/ 				"./react",
+/******/ 				"./reserch",
 /******/ 				"webpack/container/reference/component-app"
 /******/ 			],
 /******/ 			"webpack/container/remote/react-dom/client": [

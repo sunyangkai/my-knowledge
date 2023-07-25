@@ -11,7 +11,7 @@ function resolve(dir) {
 module.exports = {
     entry: "./index.js",
     mode: "development",
-    devtool:"hidden-source-map",
+    // devtool:"hidden-source-map",
     output: {
         publicPath: "http://localhost:3002/",
         clean:true

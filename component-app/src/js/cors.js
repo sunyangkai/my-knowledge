@@ -50,36 +50,40 @@
 
     ngix代理：
 
-    http {
-    include       mime.types;
-    default_type  application/octet-stream;
-    sendfile        on;
-    keepalive_timeout  65;
-
     server {
-        listen       80;
-        server_name  localhost;
+        # HTTPS 设置
+        listen 443 ssl;
+        server_name yourdomain.com;
 
-        location / {
-            root   html;
-            index  index.html index.htm;
-        }
+        ssl_certificate /etc/nginx/ssl/yourdomain.com.crt; # SSL 证书路径
+        ssl_certificate_key /etc/nginx/ssl/yourdomain.com.key; # SSL 私钥路径
 
         location /api/ {
-            # 被代理的后端服务器地址
-            proxy_pass http://backend_server_address;
+            # 反向代理设置
+            proxy_pass http://api.yourbackend.com;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 
-            # 设置跨域相关的响应头
-            add_header Access-Control-Allow-Origin $http_origin always;
-            add_header Access-Control-Allow-Credentials 'true' always;
-            add_header Access-Control-Allow-Methods 'GET, POST, PUT, DELETE, OPTIONS' always;
-            add_header Access-Control-Allow-Headers 'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization' always;
-
-            # 预检请求处理
-            if ($request_method = OPTIONS) {
-                return 204;
-            }
+            # 请求和响应缓冲区设置，可以防止大请求或响应导致的问题
+            proxy_buffers 16 16k;
+            proxy_buffer_size 32k;
         }
+
+        # 静态文件服务
+        location / {
+            root /var/www/yourdomain.com;
+        }
+
+        # 访问日志和错误日志
+        access_log /var/log/nginx/yourdomain.com.access.log;
+        error_log /var/log/nginx/yourdomain.com.error.log;
+
+        # 设置更长的连接超时时间，以避免由于代理服务器和后端服务器之间的网络延迟导致的连接问题
+        proxy_connect_timeout 600s;
+        proxy_send_timeout 600s;
+        proxy_read_timeout 600s;
+        send_timeout 600s;
     }
 }
 

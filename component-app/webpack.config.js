@@ -33,7 +33,8 @@ if (isRemote) {
     exposes: {
       "./ecnomic": "./src/ecnomic/index",
       "./hooks": "./src/hooks/index",
-      "./react": './src/react/index'
+      "./react": './src/react/index',
+      "./reserch": './src/reserch/index'
     }
   }))
 }
@@ -45,7 +46,7 @@ module.exports = {
     output: isRemote ? {
       path: path.join(__dirname, '/dist'), //打包后的文件存放的地方
       filename: '[name].[hash:8].js', //打包后输出文件的文件名
-      publicPath: '',
+      publicPath: 'http://localhost:3001/', // 暴露出去的应用可访问路径
     } : {
       publicPath: "http://localhost:3001/",
       clean:true

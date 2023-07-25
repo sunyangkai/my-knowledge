@@ -13,6 +13,9 @@
 
 */
 
+// 在封装函数里记住时间状态，返回新的函数去执行。这是一个闭包
+
+
 // 规定时间内不能执行第二次，尝试执行将重置等待时间
 const debounce = (fn, timespace) => {
     let timeid = null;
@@ -40,22 +43,24 @@ function throttle(fn, timespace) {
     }
 }
 
-// const newFunc = throttle(func, 100); 
 
 
-const d = function (fn, space) {
-    let timeid = null;
+const d = function(fn, space) {
+    let timer = null;
     return function (...args) {
-        if (timeid) {
-            clearTimeout(timeid);
-            timeid = null;
-        } else {
-            timeid = setTimeout(() => {
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(() => fn.apply(this, args), space);
+    }
+}
+
+const t = function(fn, space) {
+    let timer = null;
+    return function (...args) {
+        if (!timer) {
+            timer = setTimeout(() => {
                 fn.apply(this, args);
+                timer = null;
             }, space)
         }
     }
 }
-
-
-

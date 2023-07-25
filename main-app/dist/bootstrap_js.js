@@ -33,14 +33,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "webpack/container/remote/react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var component_app_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! component-app/react */ "webpack/container/remote/component-app/react");
-/* harmony import */ var component_app_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(component_app_react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var component_app_reserch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! component-app/reserch */ "webpack/container/remote/component-app/reserch");
+/* harmony import */ var component_app_reserch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(component_app_reserch__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _app_less__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.less */ "./app.less");
 
 
 
 var App = function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(component_app_react__WEBPACK_IMPORTED_MODULE_1__.HocRenderHook, null));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    style: {
+      height: '600px'
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(component_app_reserch__WEBPACK_IMPORTED_MODULE_1__.Yili, null));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
 

@@ -104,3 +104,27 @@ const { module } = require("webpack.config");
 // 让你自己往里面塞东西，然后它再把这个exports对象原封不动return出去，它没有参与这个过程，当然不会知道你会往这个对象里面塞什么东西啦；
 // 但是对于es module来说，你所有要导出的东西，webpack都会调用一个函数来把他们一个一个挂到最终要导出的对象上，它当然知道这里面有什么东西啦。
 // 这里的接口其实就是一个个getter。
+
+
+(function m() {
+    const modules = {};
+    function require(id) {
+        if (modules[id]) return modules[id].exports;
+        var module = installedModules[moduleId] = {
+            id: moduleId, // id
+            load: false, // 是否加载
+            exports: { } // 模块的this绑定到这里
+        }
+        modules[moduleId].call(module.exports, module, module.exports, _require); // 递归调用 module.exports 被赋值
+        module.load = true;
+        return module.exports;
+    }
+
+})({
+    './xxx1.js': function (m, exports, require) {
+        const a = require('./xxx2.js');
+    },
+    './xxx2.js':function (m, exports, require) {
+        const a = require('./xxx3.js');
+    },
+})

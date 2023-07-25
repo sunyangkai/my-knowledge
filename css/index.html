@@ -1,0 +1,134 @@
+<!DOCTYPE html> <!-- 声明html5， 声明文档定义类型DTD，告诉浏览器文档使用哪种规范编写的 -->
+<html>
+
+<head>
+</head>
+<style>
+    .rect {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .min-rect {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+    }
+
+    .rect1 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+
+    .rect2 {
+        border: 1px solid red;
+        display: flex;
+    }
+
+    .rect3 {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        float: right;
+    }
+
+    .mt20 {
+        margin-top: 20px;
+    }
+
+    .mb20 {
+        margin-bottom: 20px;
+    }
+
+    .mt30 {
+        margin-top: 30px;
+    }
+
+    .mb30 {
+        margin-bottom: 30px;
+    }
+
+    .topDiv {
+        width: 500px;
+        border: 2px solid black;
+        /* display: inline-block; */
+    }
+
+    .floatDiv {
+        width: 100px;
+        height: 100px;
+        border: 2px dotted red;
+        color: red;
+        margin: 4px;
+        float: left;
+    }
+
+    .bottomDiv {
+        width: 500px;
+        height: 100px;
+        margin: 5px 0;
+        border: 2px dotted black;
+    }
+
+    .textDiv {
+        color: blue;
+        border: 2px solid blue;
+        /* clear: left;   */
+        /* 部允许左边有浮动元素 */
+    }
+
+     /* 给父元素末尾添加一个块级元素清楚浮动 */
+    .block-div {
+        clear: both;
+    }
+
+    /* 给父元素末尾添加一个伪类清楚浮动 */
+    .clearfix:after {
+        content: '.';
+        height: 0;
+        display: block;
+        clear: both;
+    }
+</style>
+
+<body>
+    <div class="topDiv">
+        <!-- <div class="floatDiv">float left</div>
+        <div class="textDiv">测试测试测试测试测试测测试测测试测试测试</div> -->
+
+        <div class="textDiv">测试测试测试测试测试测测试测测试测试测试</div>
+        <div class="floatDiv">float left</div>
+        <!-- <div class="block-div"></div> -->
+    </div>
+    <div class="bottomDiv">测试测试测试测试测试测测试测试试测试测试测测试测试试测试测试测测试测试试测试测试测测试测试试测试测试测测试测试试测试测试测测试测试测试测试测测试测试测试测试测测试测试测试测试测测试测试测试测试测测试测试测试测试测测试测试测试</div>
+    
+
+
+    <!-- 浮动高度塌陷 -->
+    <!-- <div class="rect2">
+            <div class="rect3">3</div>
+        </div> -->
+
+    <!-- 外边距合并：父元素和第一个/最后一个子元素外边距合并 -->
+    <!-- <div class="rect mt20">
+        <div class="min-rect mt30"></div>
+    </div> -->
+    <!-- 外边距合并：相邻兄弟元素外边距合并 -->
+    <!-- <div class="rect mt20 mb20"></div>
+        <div class="rect mt30"></div> -->
+
+    <!-- 外边距合并：空块级元素外边距合并 -->
+    <!-- <div class="mt20 mb30"></div>
+        <div class="rect"></div> -->
+
+
+
+</body>
+
+</html>
