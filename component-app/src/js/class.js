@@ -233,3 +233,18 @@ const class_test = () => {
     
     }
     class_test();
+
+
+    function P(name) {
+        this.name = name;
+    }
+
+    function C(name, age) {
+        P.apply(this, [name]);
+        this.age = age;
+    }
+
+    // C.prototype = new P();
+    C.prototype = Object.assign(P.prototype)
+    C.prototype.construcotr = P;
+

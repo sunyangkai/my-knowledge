@@ -49,8 +49,7 @@ app.use((req, res, next) => {
         next();
     }
 });
-// const year_2022 = readData('2022');
-// console.log(year_2022)
+
 const testDifference = (target, data) => {
     const diff = [];
     target.forEach(t => {

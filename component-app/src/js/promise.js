@@ -200,3 +200,12 @@ class IPromise {
         })
     }
 }
+
+
+class Obersev {
+    constructor() {
+        this.promsie = [];
+    }
+
+    
+}
