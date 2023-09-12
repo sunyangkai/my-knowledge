@@ -17,9 +17,13 @@ export const ReactEvent = () => {
     // React-17  事件统一绑定container上而不是document上。利于微前端的，微前端一个前端系统中可能有多个应用
     // 对齐原生浏览器事件 支持了原生捕获事件的支持 onScroll 事件不再进行事件冒泡 
     // 
+
+    // 在 React 中，合成事件（Synthetic Event）是一种对原生浏览器事件的封装，它是一个池化的对象，
+    // 意味着在事件处理函数执行完毕后，合成事件对象会被重用，所以如果你想要在异步操作中访问事件对象的属性，
+    // 可能会遇到问题，因为事件对象可能已经被重用或者回收了。
     const handerClick = (e) => {
         console.log('handerClick')
-        // e.persist() React-16 需要在事件处理函数运行之后获取事件对象的属性时使用
+        // e.persist() 通过调用 e.persist() 方法，你可以告诉 React 不要重用合成事件对象，从而保留事件对象的所有属性
         setTimeout(() => {
             console.log('目标:', e.target) // React-16会打印null。使用e.persist()获取保留数据
         }, 100);

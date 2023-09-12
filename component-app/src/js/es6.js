@@ -81,7 +81,7 @@ const javacript_es6 = () => {
     //     }
     //     return Object.freeze(object);
     // }
-        
+ 
      /*
         class Person {
             constructor(name, age) {

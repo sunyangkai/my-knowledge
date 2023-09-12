@@ -41,6 +41,35 @@ const test_type_transfromation = () => {
         // Object.is(NaN, NaN)  // true
         // +0 === -0  // true
         // Object.is(+0, -0)  // false
+
+
+        //1.typeof 操作符可以用来判断一个值的基本类型，例如 "string"、"number"、"boolean"、"undefined"、"symbol"、"function"。
+        /*
+                    console.log(typeof "Hello"); // "string"
+                    console.log(typeof 42); // "number"
+                    console.log(typeof true); // "boolean"
+                    console.log(typeof undefined); // "undefined"
+                    console.log(typeof Symbol("symbol")); // "symbol"
+                    console.log(typeof function() {}); // "function"
+        */
+
+        // instanceof 检测目标对象是否在当前对象的原型链上
+
+        //  Object.prototype.toString() 
+        // Object.prototype.toString.call().slice(8, -1)
+        /*
+            console.log(Object.prototype.toString.call("Hello")); // "[object String]"
+            console.log(Object.prototype.toString.call(42)); // "[object Number]"
+            console.log(Object.prototype.toString.call(true)); // "[object Boolean]"
+            console.log(Object.prototype.toString.call(undefined)); // "[object Undefined]"
+            console.log(Object.prototype.toString.call(Symbol("symbol"))); // "[object Symbol]"
+            console.log(Object.prototype.toString.call(function() {})); // "[object Function]"
+            console.log(Object.prototype.toString.call([])); // "[object Array]"
+            console.log(Object.prototype.toString.call({})); // "[object Object]"
+
+        */
+
+
 }
 
 

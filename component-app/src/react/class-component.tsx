@@ -36,10 +36,26 @@ import React from "react";
 
 //对React的插槽(Portals)的理解，如何使用，有哪些使用场景？
 //  节点渲染到存在于父组件以外的 DOM 节点   对话框，模态窗。
+    // 这里的内容将会被渲染到根 DOM 节点之外的地方
+    //  ReactDOM.createPortal(
+    //     <div className="portal-container">
+    //       This is rendered using a portal!
+    //     </div>,
+    //     document.getElementById('portal-root') // 指定要渲染到的目标 DOM 节点
+    //   );
 
 
 // 在React中如何避免不必要的render？
 // shouldComponentUpdate 和 PureComponent （浅层对比 prop 和 state 组件的 props 和 state 均为基本类型时，使用React.PureComponent可以起到优化性能的作用。
+// class MyComponent extends React.PureComponent {
+//   render() {
+//     return (
+//       <div>
+//         {/* 组件的渲染内容 */}
+//       </div>
+//     );
+//   }
+// }
 // 如果对象中包含复杂的数据结构，则有可能因为无法检查深层的差别，产生错误的比对结果）
 // Immutable is 对比
 /// React.memo 为高阶组件。它与 React.PureComponent 非常相似，但只适用于函数组件，而不适用 class 组件
