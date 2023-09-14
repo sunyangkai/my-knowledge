@@ -42,7 +42,7 @@ if (isRemote) {
 module.exports = {
     entry: "./index.js",
     mode: "development",
-    devtool:"hidden-source-map",
+    devtool: "eval-source-map",  //"hidden-source-map",
     output: isRemote ? {
       path: path.join(__dirname, '/dist'), //打包后的文件存放的地方
       filename: '[name].[hash:8].js', //打包后输出文件的文件名
@@ -58,7 +58,7 @@ module.exports = {
         public: resolve('src/public'),
         home: resolve('src/home'),  
       },
-        extensions: ['.jsx','.tsx', '.js', '.json','.css','.scss','.jpg','jpeg','png',],
+        extensions: ['.jsx','.tsx', '.js', '.tsx', '.ts', '.json','.css','.scss','.jpg','jpeg','png',],
       },
 
     module: {
@@ -117,6 +117,7 @@ module.exports = {
       ],
       },
     plugins,
+
     devServer: {
       port: 3001,
       hot: true,

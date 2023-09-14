@@ -27,18 +27,7 @@
         ],
         "baseUrl": ".",
         "paths": {
-            "component-app": [
-                "../component-app/dist/types"
-            ],
-            "myRouter": [
-                "./src/lib/router"
-            ],
-            "static_page": [
-                "./img"
-            ],
-            "@components": [
-                "./public/components"
-            ],
+            "src/*": ["src/*"]
 
         }
     },
