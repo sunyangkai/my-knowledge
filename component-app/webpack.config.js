@@ -1,13 +1,14 @@
 
-const webpack = require('webpack');
-const { ModuleFederationPlugin } = require('webpack').container;
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const miniCssExtractPlugin = require('mini-css-extract-plugin') // 通过 CSS 文件的形式引入到页面上
+// const webpack = require('webpack');
+import { container } from 'webpack';
+const { ModuleFederationPlugin } = container;
+import HtmlWebpackPlugin from "html-webpack-plugin";
+// import miniCssExtractPlugin from 'mini-css-extract-plugin'; // 通过 CSS 文件的形式引入到页面上
 
-const path = require('path');
-const registerBundleLib = require('../util/webpack-config-util').registerBundleLib;
+import { join } from 'path';
+import { registerBundleLib } from '../util/webpack-config-util';
 function resolve(dir) {
-  return path.join(__dirname, dir)
+  return join(__dirname, dir)
 }
 
 const args = process.argv.slice(2); 
@@ -39,7 +40,7 @@ if (isRemote) {
   }))
 }
 
-module.exports = {
+export default {
     entry: "./index.js",
     mode: "development",
     devtool: "eval-source-map",  //"hidden-source-map",

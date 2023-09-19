@@ -18,5 +18,25 @@
         "react"
     ],
     "rules": {
-    }
+    },
+    "globals": {
+        "__dirname": true,
+        "process": true,
+        "require": true,
+        "module": true,
+        "exports": true,
+        "console": true,
+        "window": true,
+        "document": true,
+        "navigator": true,
+        "fetch": true,
+        "setTimeout": true,
+        "setInterval": true,
+        "clearTimeout": true,
+        "clearInterval": true,
+        "Promise": true,
+        "FormData": true,
+        "XMLHttpRequest": true,
+        "MY_GLOBAL": true
+      }
 }
